@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import info from './data'
 
 function App() {
+  const [data, setData] = useState(data);
   return (
     <div className="App">
       <header className="App-header">
