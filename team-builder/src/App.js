@@ -4,8 +4,9 @@ import './App.css';
 import {info} from './data'
 
 const Post = (props) =>{
+  console.log('props in Post => ', props.item.name)
   return(<div>
-    <h2>I'm sure you are</h2>
+    <h2>{props.item.name}</h2>
   </div>)
 }
 
