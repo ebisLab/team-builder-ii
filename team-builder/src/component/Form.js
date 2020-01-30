@@ -30,7 +30,7 @@ const Form = (props) =>{
     }
 return(
     <div>
-        <h2>Hello from inside the Form</h2>
+        <h2>Hello from inside the Form Component</h2>
         <form onSubmit={submitForm}>
             <label htmlFor="name">Name</label>
             <input 
