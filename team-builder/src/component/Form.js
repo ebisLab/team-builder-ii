@@ -14,10 +14,14 @@ role: ''
         // e.preventDefault();
         console.log(data)
     }
+
+    const submitForm = e =>{
+        e.preventDefault();
+    }
 return(
     <div>
         <h2>Hello from inside the Form</h2>
-        <form >
+        <form onSubmit={submitForm}>
             <label htmlFor="name">Name</label>
             <input 
             id="name"
