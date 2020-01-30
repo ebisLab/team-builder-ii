@@ -11,7 +11,7 @@ const Form = (props) =>{
     }])
 
     const handleChanges = e =>{
-        setData({name: e.target.value})
+        setData({...data, [e.target.name]: e.target.value})
         console.log(data)
     }
 
@@ -38,7 +38,6 @@ return(
             name="email"
             type="text"
             onChange={handleChanges}
-
             />
             <label htmlFor="role">Role</label>
             <input 
@@ -46,7 +45,6 @@ return(
             name="role"
             type="text"
             onChange={handleChanges}
-
             />
             <button>Submit</button>
         </form>

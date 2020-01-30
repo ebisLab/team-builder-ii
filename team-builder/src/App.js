@@ -8,6 +8,9 @@ const Member = (props) =>{
   console.log('props in Member => ', props.item.name)
   return(<div>
     <h2>{props.item.name}</h2>
+    <p>{props.item.body}</p>
+    <p>{props.item.email}</p>
+    <p>{props.item.role}</p>
   </div>)
 }
 
