@@ -1,26 +1,20 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import info from './data'
+import {info} from './data'
 
-function App() {
-  const [data, setData] = useState(data);
+
+
+function App(props) {
+  const [data, setData] = useState(info);
+
+  console.log(data, '<==props')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Hello from inside App component</h2>
+      {/* <Team data={data} /> */}
+{/* {props.data.map((inf)=><div>Hello World</div>)} */}
+    
     </div>
   );
 }
