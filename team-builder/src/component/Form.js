@@ -11,7 +11,7 @@ role: ''
 
     const handleChanges = e =>{
         setData({name: e.target.value})
-        e.preventDefault();
+        // e.preventDefault();
         console.log(data)
     }
 return(

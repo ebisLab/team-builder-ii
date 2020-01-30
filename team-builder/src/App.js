@@ -29,6 +29,17 @@ function App(props) {
 // name: 'Ebi D Navigator',
 // }
 );
+const addNewPeople = (peep) => {
+const newPerson = {
+  id: Date.now(),
+  name: peep.name,
+  body: peep.body,
+  email: peep.email,
+role: peep.role
+}
+//7. add more to data object
+setData([...data, newPerson])
+}
 
   console.log(data, '<==props')
   return (
@@ -38,8 +49,8 @@ function App(props) {
 
       {/* <Another data={data}/> */}
       {data.map(item=>(<Member item={item}/>))}
-
-      <Form data={data} />
+{/*pass addPerson as function*/}
+      <Form data={data} addNewPeople={addNewPeople}/>
     
     </div>
   );
