@@ -2,21 +2,23 @@ import React, {useState} from 'react';
 
 
 const Form = (props) =>{
-    const [data, setData]= useState({
+    const [data, setData]= useState([
+        {
         name: '',
-body: '', 
-email: '',
-role: ''
-    })
+        body: '', 
+        email: '',
+        role: ''
+    }])
 
     const handleChanges = e =>{
         setData({name: e.target.value})
-        // e.preventDefault();
         console.log(data)
     }
 
     const submitForm = e =>{
         e.preventDefault();
+        //10. creates a new note with our state
+        props.addNewPeople(data);
     }
 return(
     <div>
