@@ -2,6 +2,12 @@ import React, {useState} from 'react';
 
 
 const Form = (props) =>{
+    const [data, setData]= useState({
+        name: '',
+body: '', 
+email: '',
+role: ''
+    })
 return(
     <div>
         <h2>Hello from inside the Form</h2>
