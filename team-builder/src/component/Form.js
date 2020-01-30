@@ -19,6 +19,14 @@ const Form = (props) =>{
         e.preventDefault();
         //10. creates a new note with our state
         props.addNewPeople(data);
+        //12. empty fields after we submit
+        setData(
+            { name: '',
+        body: '', 
+        email: '',
+        role: ''
+}
+)
     }
 return(
     <div>
@@ -30,6 +38,7 @@ return(
             name="name"
             type="text"
             onChange={handleChanges}
+            value={ data.name}
             />
 
             <label htmlFor="email">Email</label>
@@ -38,6 +47,7 @@ return(
             name="email"
             type="text"
             onChange={handleChanges}
+            value={data.email}
             />
             <label htmlFor="role">Role</label>
             <input 
@@ -45,6 +55,7 @@ return(
             name="role"
             type="text"
             onChange={handleChanges}
+            value={ data.role}
             />
             <button>Submit</button>
         </form>
