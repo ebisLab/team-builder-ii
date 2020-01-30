@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {info} from './data'
+import {info} from './data';
+import Form from './component/Form'
 
 const Post = (props) =>{
   console.log('props in Post => ', props.item.name)
@@ -37,9 +38,12 @@ function App(props) {
 
       <Another data={data}/>
       {data.map(item=>(<Post item={item}/>))}
+
+      <Form data={data} />
     
     </div>
   );
+
 }
 
 export default App;
